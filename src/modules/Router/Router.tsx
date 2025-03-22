@@ -1,12 +1,12 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Main } from '../../pages/main/Main/Main'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Main } from '../../pages/main/Main/Main';
 
 export const Router = () => {
     return (
-        <BrowserRouter basename="/">
+        <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Main />} />
             </Routes>
         </BrowserRouter>
-    )
-}
+    );
+};
