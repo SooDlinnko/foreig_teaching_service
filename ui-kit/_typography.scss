@@ -1,0 +1,26 @@
+/*$font-family-base: 'Poppins', sans-serif;
+$letter-spacing-base: 0%;
+
+@mixin typography($size, $line-height, $letter-spacing, $weight, $color-text){
+    font-family: $font-family-base;
+    font-size: $size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    font-weight: $weight;
+}
+
+.headline1 {
+    @include typography($headline-size, $headline-line-height, $headline-letter-spacing, $headline-weight);
+
+  @include button-variant(
+    $color-secondary4,
+    $color-secondary5,
+    $color-secondary3,
+    $color-default2,
+    $color-default1,
+    $color-default1,
+    none,
+    0px
+);
+}
+*/

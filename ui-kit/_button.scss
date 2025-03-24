@@ -1,0 +1,151 @@
+@use 'colors' as *;
+
+
+@mixin button-variant($bg, $hover-bg, $active-bg, $disbled-bg, $text, $disabled-text, $border-color, $border-width, $border-radius: 10px) {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 45px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: $bg;
+    color: $text;
+    border: $border-width solid $border-color;
+    border-radius: $border-radius;
+
+    &:hover {
+        background-color: $hover-bg;
+    }
+
+    &:active {
+        background-color: $active-bg;
+    }
+
+    &:disabled {
+        background-color: $disbled-bg;
+        color: $disabled-text;
+        border-color: $disbled-bg;
+        cursor: not-allowed;
+    }
+}
+
+.button-primary {
+    @include button-variant(
+        $color-secondary4,
+        $color-secondary5,
+        $color-secondary3,
+        $color-default2,
+        $color-default1,
+        $color-default1,
+        none,
+        0px
+    );
+    border: none;
+}
+
+.button-secondary {
+    @include button-variant(
+        $color-primary4,
+        $color-primary5,
+        $color-primary3,
+        $color-default2,
+        $color-default1,
+        $color-default1,
+        none,
+        0px
+    );
+    border: none;
+}
+
+.button-primary-outline {
+    @include button-variant(
+        transparent,
+        $color-secondary1,
+        $color-secondary2,
+        $color-default2,
+        $color-secondary5,
+        $color-default1,
+        $color-secondary5,
+        2px
+    );
+}
+
+.button-secondary-outline {
+    @include button-variant(
+        transparent,
+        $color-primary1,
+        $color-primary2,
+        $color-default2,
+        $color-primary5,
+        $color-default1,
+        $color-primary5,
+        2px
+    );
+    border-radius: 10px;
+}
+
+.button-tertiary1 {
+    @include button-variant(
+        none,              // Фон
+        none,              // Hover фон
+        none,              // Active фон
+        none,              // Disabled фон
+        $color-accent4,    // Основной цвет текста
+        $color-default2,   // Цвет текста в disabled
+        none,              // Цвет границы (отключаем)
+        0px                // Ширина границы (нет границы)
+    );
+    background: none;
+    border: none;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: $color-accent5;
+    }
+
+    &:disabled {
+        text-decoration: none;
+    }
+}
+
+.button-tertiary2 {
+    @include button-variant(
+        none,
+        none,
+        none,
+        none,
+        $color-success3,
+        $color-default2,
+        none,
+        0px
+    );
+    background: none;
+    border: none;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-success3;
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: $color-success4;
+        text-decoration: underline;
+    }
+
+    &:disabled {
+        color: $color-default2;
+        cursor: not-allowed;
+        text-decoration: none;
+    }
+}

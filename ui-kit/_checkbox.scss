@@ -1,0 +1,42 @@
+@use 'colors' as *;
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  
+    input {
+      display: none; 
+    }
+  
+    .checkbox-box {
+      width: 32px;
+      height: 32px;
+      border-radius: 5px;
+      border: 2px solid $color-default3;
+      background-color: $color-default1;
+      transition: all 0.2s ease-in-out;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px 20px;
+    }
+  
+    &:hover .checkbox-box {
+      border-color: $color-default4;
+    }
+  
+
+    input:checked + .checkbox-box {
+      background-color: $color-success3;
+      border-color: $color-success5;
+      background-image: url("./image/checkbox-true.svg"); // Подставь правильный путь
+    }
+  
+    &.error input:checked + .checkbox-box {
+      background-color: $color-error3;
+      border-color: $color-error4;
+      background-image: url("./image/checkbox-false.svg"); // Подставь правильный путь
+    }
+  }
+  

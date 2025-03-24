@@ -1,0 +1,32 @@
+@use 'colors' as*;
+
+.input1-field {
+    width: 345px;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid $color-default5;
+    padding: 0 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -2%;
+    color: $color-default5;
+    transition: all 0.3s ease;
+
+    &::placeholder {
+        color: $color-default5;
+    }
+
+    /*&:focus-visible {
+        outline: none;
+        border-color: $color-primary5; 
+    }*/
+
+    &:disabled {
+        background-color: $color-default2;
+        border: none;
+        color: $color-default4;
+        cursor: not-allowed;
+    }
+}

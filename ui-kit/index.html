@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кнопки</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="button-primary">Primary Button</button>
+  <button class="button-secondary">Secondary Button</button>
+  <button class="button-primary-outline">Primary Outline Button</button>
+  <button class="button-secondary-outline">Secondary Outline Button</button>
+  <button class="button-tertiary1">Tertiary1 Button</button>
+  <button class="button-tertiary2">Tertiary2 Button</button>
+
+  <label class="checkbox">
+    <input type="checkbox">
+    <div class="checkbox-box"></div>
+  </label>
+  
+  <form>
+    <div class="radio">
+      <input class="radio-input" type="radio" id="radio1" name="radio">
+      <label class="radio-label" for="radio1">Радиокнопка 1</label>
+    </div>
+  </form>
+
+  <label class="toggle">
+    <input type="checkbox" class="toggle-input">
+    <div class="toggle-slider"></div>
+  </label>
+
+  <form>
+    <!-- Обычное состояние -->
+    <input type="text" class="input1-field" placeholder="Введите текст">
+
+    <!-- Заблокированное состояние -->
+    <input type="text" class="input2-field" placeholder="Введите текст" >
+
+    
+    <input type="text" class="input1-field" placeholder="Заблокированное поле" disabled>
+</form>
+
+  <script src="radiobutton.js"></script>
+  <script src="checkbox.js"></script>
+</body>
+</html>
